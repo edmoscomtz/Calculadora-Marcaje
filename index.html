@@ -26,7 +26,6 @@
             font-size: 16px; 
             background: #fff;
         }
-        /* Nueva caja para la hipotenusa independiente */
         .hipo-box {
             background: #e2e8f0;
             padding: 15px;
@@ -39,7 +38,6 @@
         }
         .hipo-box span:last-child { color: #0056b3; }
         
-        /* Caja de puntos de marcaje */
         .result-box { 
             background: #fff; 
             padding: 20px; 
@@ -51,7 +49,6 @@
         .result-item { margin-bottom: 12px; font-size: 18px; display: flex; justify-content: space-between; }
         .result-item span { font-weight: bold; color: #0056b3; }
         
-        /* Contenedor del SVG para el diagrama */
         .diagram-container {
             background: #fff;
             padding: 20px;
@@ -68,10 +65,7 @@
 
     <h2>Calculadora de Marcaje</h2>
 
-    <label for="cinta">La cinta comienza en:</label>
-    <input type="number" id="cinta" placeholder="0" oninput="calcular()">
-
-    <h3>Dimensiones de Carpa</h3>
+    <h3 style="margin-top: 10px;">Dimensiones de Carpa</h3>
     
     <label for="dim1">Dimensión 1 (Base):</label>
     <input type="number" id="dim1" placeholder="Ej. 10" oninput="calcular()">
@@ -79,16 +73,20 @@
     <label for="dim2">Dimensión 2 (Altura):</label>
     <input type="number" id="dim2" placeholder="Ej. 5" oninput="calcular()">
 
-    <!-- Hipotenusa ahora está fuera y debajo de las dimensiones -->
     <div class="hipo-box">
         <span>Hipotenusa de la carpa:</span> 
         <span id="res-hipo">0.00</span>
     </div>
 
-    <!-- Nueva sección de Puntos de marcaje -->
     <div class="result-box">
         <h3 style="margin-top: 0;">Puntos de marcaje con 1 Cinta</h3>
+        
+        <!-- El campo de la cinta ahora está dentro de la caja de resultados -->
+        <label for="cinta" style="margin-top: 15px;">La cinta comienza en:</label>
+        <input type="number" id="cinta" placeholder="0" oninput="calcular()" style="margin-bottom: 20px;">
+
         <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+        
         <div class="result-item">Punto 1: <span id="res-p1">0.00</span></div>
         <div class="result-item">Punto 2: <span id="res-p2">0.00</span></div>
         <div class="result-item">Punto 3: <span id="res-p3">0.00</span></div>
